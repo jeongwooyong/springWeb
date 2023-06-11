@@ -1,5 +1,7 @@
-package kr.mjc.wooyong.web.dao;
+package kr.mjc.wooyong.web.dao.user;
 
+import kr.mjc.wooyong.web.dao.Limit;
+import kr.mjc.wooyong.web.dao.user.User;
 import lombok.AllArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -63,9 +65,9 @@ public class UserDao {
      * @param page  페이지
      * @return 회원 목록
      */
-    public List<User> listUsers(int count, int page) {
-        int offset = (page - 1) * count;  // 목록의 시작 시점
-        return jdbcTemplate.query(LIST_USERS, userRowMapper, offset, count);
+    public List<User> listUsers(Limit limit) {
+        return jdbcTemplate.query(LIST_USERS, userRowMapper, limit.getOffset(),
+                limit.getCount());
     }
 
     /**

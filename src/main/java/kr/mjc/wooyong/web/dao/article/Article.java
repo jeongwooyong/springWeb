@@ -1,6 +1,7 @@
-package kr.mjc.wooyong.web.dao;
+package kr.mjc.wooyong.web.dao.article;
 
 import lombok.Data;
+import org.owasp.encoder.Encode;
 
 @Data
 public class Article {
@@ -11,6 +12,21 @@ public class Article {
     String name;
     String cdate;
     String udate;
+
+    public String getTitleEncoded() {
+        return Encode.forHtml(title);
+    }
+
+    public String getContentEncoded() {
+        return Encode.forHtml(content);
+    }
+
+    /**
+     * new line을 <br> 태그로 변환
+     */
+    public String getContentHtml() {
+        return Encode.forHtml(content).replace("\n", "</br>\n");
+    }
 
     @Override
     public String toString() {

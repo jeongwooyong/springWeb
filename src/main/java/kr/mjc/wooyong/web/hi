@@ -1,0 +1,7 @@
+Browser에서 서버의 데이터를 jsp에 연결하여 출력한다.
+
+         Browser
+
+List?count=20&page=1
+-> count=20&page=1 는 파라미터 라고 함
+

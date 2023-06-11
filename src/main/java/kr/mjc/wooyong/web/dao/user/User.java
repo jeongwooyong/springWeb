@@ -1,4 +1,4 @@
-package kr.mjc.wooyong.web.dao;
+package kr.mjc.wooyong.web.dao.user;
 
 import lombok.Data;
 

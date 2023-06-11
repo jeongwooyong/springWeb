@@ -4,8 +4,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import kr.mjc.wooyong.web.dao.User;
-import kr.mjc.wooyong.web.dao.UserDao;
+import kr.mjc.wooyong.web.dao.Limit;
+import kr.mjc.wooyong.web.dao.user.User;
+import kr.mjc.wooyong.web.dao.user.UserDao;
 import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class UserListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
-        List<User> userList = userDao.listUsers(10, 1);
+        List<User> userList = userDao.listUsers(new Limit());
 
         String html = """
         <!DOCTYPE html>

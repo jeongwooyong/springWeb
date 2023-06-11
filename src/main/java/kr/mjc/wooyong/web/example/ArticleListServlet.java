@@ -4,9 +4,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import kr.mjc.wooyong.web.dao.ArticleDao;
-import kr.mjc.wooyong.web.dao.Article;
+import kr.mjc.wooyong.web.dao.article.ArticleDao;
+import kr.mjc.wooyong.web.dao.article.Article;
 
+import kr.mjc.wooyong.web.dao.Limit;
 import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
@@ -27,7 +28,7 @@ public class ArticleListServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
-        List<Article> articleList = articleDao.listArticles(10, 1);
+        List<Article> articleList = articleDao.listArticles(new Limit());
 
         String html = """
         <!DOCTYPE html>
