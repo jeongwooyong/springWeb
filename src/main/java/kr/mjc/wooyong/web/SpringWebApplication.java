@@ -40,7 +40,12 @@ public class SpringWebApplication extends SpringBootServletInitializer
                 .addPathPatterns("/user/myInfo", "/user/passwordEdit",
                         "/user/updatePassword", "/article/articleForm",
                         "/article/addArticle", "/article/articleEdit",
-                        "/article/updateArticle", "/article/deleteArticle");
+                        "/article/updateArticle", "/article/deleteArticle",
+                        "/movie/movieForm", "/movie/addMovie",
+                        "/movie/movieEdit", "/movie/updateMovie",
+                        "/movie/deleteMovie", "/song/songForm",
+                        "/song/addSong", "/song/songEdit",
+                        "/song/updateSong", "/song/deleteSong");
         log.info("signinInterceptor 등록");
     }
 }

@@ -31,7 +31,6 @@ public class ArticleDao {
       select articleId, title, content, userId, name, cdate, udate from article
       where articleId=? and userId=?
       """;
-    //로그인한 사람이 자기의 글만 가져올 수 있게 함
 
     private static final String ADD_ARTICLE = """
       insert article(title, content, userId, name)
