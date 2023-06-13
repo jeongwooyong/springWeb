@@ -39,7 +39,7 @@ public class PostDao {
       """;
 
     private static final String UPDATE_POST = """
-      update post set contents=:contents, name=:name
+      update post set contents=:contents
       where postId=:postId and userId=:userId
       """;
 

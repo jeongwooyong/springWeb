@@ -48,7 +48,7 @@ public class SpringWebApplication extends SpringBootServletInitializer
                         "/song/updateSong", "/song/deleteSong",
                         "/post/postForm", "/post/addPost",
                         "/post/postEdit","/post/updatePost",
-                        "/post/deleteForm");
+                        "/post/deletePost");
         log.info("signinInterceptor 등록");
     }
 }

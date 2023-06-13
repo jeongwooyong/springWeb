@@ -22,12 +22,10 @@
     <h3>글보기</h3>
     <p><a href="${sessionScope.CURRENT_POST_LIST}">글목록</a>
         <a href="./postEdit?postId=${post.postId}">글수정</a>
-        <a id="btnDel" href="./deletePost?PostId=${Post.PostId}">글삭제</a>
+        <a id="btnDel" href="./deletePost?postId=${post.postId}">글삭제</a>
     </p>
-    <p class="info title">${Post.PostId}. ${Post.contentsEncoded}</p>
-    <p class="info">${Post.cdate} / <a
-            href="../user/userInfo?userId=${Post.userId}">${Post.name}</a></p>
-    <p class="info">${Post.contentHtml}</p>
+    <p class="info title">${post.postId}. ${post.contentsEncoded}</p>
+
     <!-- new line을 생성 -->
     <!-- Get을 빼고 앞의 c를 소문자로 contentHtml로 한것은 Bean 의 property-->
     <!-- 메소드를 사용해도 된다 -->

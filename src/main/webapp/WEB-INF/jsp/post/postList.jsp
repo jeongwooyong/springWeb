@@ -35,7 +35,7 @@
             <tr>
                 <td>${post.postId}</td>
                 <td><a
-                        href="./post?postId=${post.postId}">${post.titleEncoded}</a>
+                        href="./post?postId=${post.postId}">${post.contentsEncoded}</a>
                     <!-- titleEncoded는 제목에서 html을 못쓰게 한다 -->
                     <!-- >112. 제목 &lt;script&gt;alert(&#34;abc&#34;);&lt;/script&gt; &lt;h1&gt;큰글자&lt;/h1&gt;</p> -->
                 </td>

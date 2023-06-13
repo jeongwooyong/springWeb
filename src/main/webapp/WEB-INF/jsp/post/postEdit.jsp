@@ -14,8 +14,8 @@
 <main>
     <h3>글 수정</h3>
     <form action="./updatePost" method="post">
-        <p><textarea name="contents" placeholder="내용"
-                     required>${post.contentsEncoded}</textarea></p>
+        <p><input type="text" name="contents" value="${post.contentsEncoded}"
+                    placeholder="내용" required autofocus/> </p>
         <p>
             <button type="submit">저장</button>
         </p>
