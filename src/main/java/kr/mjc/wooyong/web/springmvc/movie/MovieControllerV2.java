@@ -1,11 +1,7 @@
 package kr.mjc.wooyong.web.springmvc.movie;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import kr.mjc.wooyong.web.HttpUtils;
-
 import kr.mjc.wooyong.web.dao.Limit;
 import kr.mjc.wooyong.web.dao.movie.Movie;
 import kr.mjc.wooyong.web.dao.movie.MovieDao;
@@ -19,7 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.io.IOException;
 
 /**
  * Servlet API를 사용하는 컨트롤러
@@ -67,8 +62,7 @@ public class MovieControllerV2 {
     }
 
     @GetMapping("/movie/deleteMovie")
-    public String deleteMovie(int movieId,
-                              @SessionAttribute(CURRENT_MOVIE_LIST) String currentMovieList) {
+    public String deleteMovie(int movieId,@SessionAttribute(CURRENT_MOVIE_LIST) String currentMovieList) {
         getUserMovie(movieId);
         movieDao.deleteMovie(movieId);
         return "redirect:" + currentMovieList;

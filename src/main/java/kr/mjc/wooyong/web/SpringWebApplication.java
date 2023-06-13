@@ -45,7 +45,10 @@ public class SpringWebApplication extends SpringBootServletInitializer
                         "/movie/movieEdit", "/movie/updateMovie",
                         "/movie/deleteMovie", "/song/songForm",
                         "/song/addSong", "/song/songEdit",
-                        "/song/updateSong", "/song/deleteSong");
+                        "/song/updateSong", "/song/deleteSong",
+                        "/post/postForm", "/post/addPost",
+                        "/post/postEdit","/post/updatePost",
+                        "/post/deleteForm");
         log.info("signinInterceptor 등록");
     }
 }

@@ -55,18 +55,15 @@ public class MovieDao{
             new BeanPropertyRowMapper<>(Movie.class);
 
     public List<Movie> listMovies(Limit limit) {
-        return jdbcTemplate.query(LIST_MOVIES, movieRowMapper,
-                limit.getOffset(), limit.getCount());
+        return jdbcTemplate.query(LIST_MOVIES, movieRowMapper,limit.getOffset(), limit.getCount());
     }
 
     public Movie getMovie(int movieId) {
-        return jdbcTemplate.queryForObject(GET_MOVIE, movieRowMapper,
-                movieId);
+        return jdbcTemplate.queryForObject(GET_MOVIE, movieRowMapper,movieId);
     }
 
     public Movie getUserMovie(int movieId) {
-        return jdbcTemplate.queryForObject(GET_USER_MOVIE, movieRowMapper,
-                movieId);
+        return jdbcTemplate.queryForObject(GET_USER_MOVIE, movieRowMapper,movieId);
     }
 
     public void addMovie(Movie movie) {

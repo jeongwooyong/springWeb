@@ -26,7 +26,6 @@ public class Movie {
     @Override
     public String toString() {
         return String.format(
-                "\nMovie{movieId=%d, title=%s, director=%s}",
-                movieId, title, director);
+                "\nMovie{movieId=%d, title=%s, director=%s}", movieId, title, director);
     }
 }
