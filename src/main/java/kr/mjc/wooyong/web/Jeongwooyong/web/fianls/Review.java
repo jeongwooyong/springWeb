@@ -1,12 +1,13 @@
-package kr.mjc.wooyong.web.dao.post;
+package kr.mjc.wooyong.web.Jeongwooyong.web.fianls;
 
 import lombok.Data;
 import org.owasp.encoder.Encode;
 
 @Data
-public class Post {
-    int postId;
+public class Review {
+    int reviewId;
     String contents;
+    int grade;
     int userId;
     String name;
     String cdate;
@@ -23,7 +24,7 @@ public class Post {
     @Override
     public String toString() {
         return String.format(
-                "\nPost{postId=%d,contents=%s, userId=%d, name=%s, cdate=%s}",
-                postId, contents, userId, name, cdate);
+                "\nReview{reviewId=%d,contents=%s, userId=%d, grade=%d name=%s, cdate=%s}",
+                reviewId, contents, userId, grade, name, cdate);
     }
 }

@@ -3,5 +3,5 @@ main {padding:4px;}
 h1, h3 {padding:8px;}
 table {border-collapse:collapse; width:100%; border-top:1px solid gray; margin-bottom:8px;}
 tr {border-bottom:1px solid gray;}
-th {text-align:left; background-color:orangered; color:white;}
+th {text-align:left; background-color:plum; color:white;}
 .info th, .info td {padding:4px;}

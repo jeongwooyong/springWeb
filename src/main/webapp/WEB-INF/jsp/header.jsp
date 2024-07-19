@@ -7,6 +7,7 @@
         <li><a href="../movie/movieList">영화목록</a></li>
         <li><a href="../song/songList">노래목록</a></li>
         <li><a href="../post/postList">Post목록</a></li>
+        <li><a href="../review/reviewList">평점목록</a></li>
         <c:choose>
             <c:when test="${empty sessionScope.me_userId}">
                 <li><a href="../user/signinForm">로그인</a></li>
