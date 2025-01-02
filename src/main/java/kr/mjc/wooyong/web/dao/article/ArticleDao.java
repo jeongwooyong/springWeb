@@ -41,16 +41,12 @@ public class ArticleDao {
       update article set title=:title, content=:content
       where articleId=:articleId and userId=:userId
       """;
-
     private static final String DELETE_ARTICLE =
             "delete from article where articleId=? and userId=?";
 
     private final JdbcTemplate jdbcTemplate;
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    /**
-     * resultSet을 article 오브젝트로 자동 매핑하는 매퍼
-     */
-    private final RowMapper<Article> articleRowMapper =
+       private final RowMapper<Article> articleRowMapper =
             new BeanPropertyRowMapper<>(Article.class);
 
     public List<Article> listArticles(Limit limit) {
